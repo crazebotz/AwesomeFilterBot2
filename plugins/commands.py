@@ -21,7 +21,7 @@ BATCH_FILES = {}
 
 start_buttons = [[
     InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕',
-                         url=f'start_buttons?startgroup=true'),
+                         url=f'https://t.me/MixmovieFilter_bot?startgroup=true'),
 ], [
     InlineKeyboardButton('🤖 About Me 🤖', callback_data='about'),
     InlineKeyboardButton('💥 Help ♥️', callback_data="help"),
@@ -40,7 +40,6 @@ two_buttons = [
             ]
         ]
 
-ADMINS = [5294965763 5968371625 564722824]
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
