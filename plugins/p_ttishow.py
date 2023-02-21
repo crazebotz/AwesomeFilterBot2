@@ -7,8 +7,6 @@ from database.ia_filterdb import Media
 from utils import get_size, temp, get_settings
 from Script import script
 from pyrogram.errors import ChatAdminRequired
-ADMINS = [5294965763 5968371625 564722824]
-
 
 """-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
 
