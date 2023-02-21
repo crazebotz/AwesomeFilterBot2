@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+API_ID = int(environ.get('API_ID', '28160559'))
+API_HASH = environ.get('API_HASH', 'ca5085c3f41b16df46dbeebed6e56081')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6089427422:AAHzmJu1-XZnSgAoq_Nr4XcQN8pOucNzAmA')
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
@@ -22,13 +22,13 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/7e56d907542396289fee4.jpg h
 
 # Admins, Channels & Users
 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
-ADMINS = [5294965763, 5968371625, 564722824]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001516233868').split()]
+
+ADMINS = ['yourinviteIink','Rahul_Thakor', 'Moviewale8'] #5968371625
 AUTH_USERS = ADMINS
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('AUTH_CHANNEL','-1001430858047')
 auth_grp = environ.get('AUTH_GROUP')
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+AUTH_CHANNEL = -1001430858047
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 GROUP_LINK = environ.get('GROUP_LINK','https://t.me/crazeBots')
 
@@ -36,12 +36,12 @@ HOW_TO_LINK = environ.get('HOW_TO_LINK','https://t.me/dl_tutorial')
 
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "MYDB")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://admin:rahul@mydatabase.zu1yt8m.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "MYDB2")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001732529736))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Crazebots')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
