@@ -33,7 +33,7 @@ FILTER_MODE = {}
 
 start_buttons = [[
     InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕',
-                         url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                         url=f'https://t.me/MixmovieFilter_bot?startgroup=true'),
 ], [
     InlineKeyboardButton('🤖 About Me 🤖', callback_data='about'),
     InlineKeyboardButton('💥 Help ♥️', callback_data="help"),
