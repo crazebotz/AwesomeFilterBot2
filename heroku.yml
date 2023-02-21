@@ -1,0 +1,7 @@
+build:
+  languages:
+    - python
+  buildpacks:
+    - heroku/python
+  scripts:
+    - python my_script.py
