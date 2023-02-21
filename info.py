@@ -13,8 +13,8 @@ def is_enabled(value, default):
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '28160559'))
-API_HASH = environ.get('API_HASH', 'ca5085c3f41b16df46dbeebed6e56081')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6089427422:AAHzmJu1-XZnSgAoq_Nr4XcQN8pOucNzAmA')
+API_HASH = environ.get('API_HASH', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
@@ -30,13 +30,13 @@ auth_channel = environ.get('AUTH_CHANNEL','-1001430858047')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = -1001430858047
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-GROUP_LINK = environ.get('GROUP_LINK','https://t.me/crazeBots')
+GROUP_LINK = environ.get('GROUP_LINK','https://t.me/Hindi_movies_Pot')
 
-HOW_TO_LINK = environ.get('HOW_TO_LINK','https://t.me/dl_tutorial')
+HOW_TO_LINK = environ.get('HOW_TO_LINK','https://t.me/How_To_watch_ShareDisk_Shareus')
 
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://admin:rahul@mydatabase.zu1yt8m.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "MYDB2")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
