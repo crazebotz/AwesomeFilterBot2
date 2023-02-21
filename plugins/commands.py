@@ -290,8 +290,8 @@ async def channel_info(bot, message):
         await message.reply_document(file)
         os.remove(file)
 
-
-@Client.on_message(filters.command('logs') & filters.user(ADMINS))
+print("ADMIN",ADMINS)
+@Client.on_message(filters.chat(ADMINS) & filters.command('logs'))
 async def log_file(bot, message):
     """Send log file"""
     try:
