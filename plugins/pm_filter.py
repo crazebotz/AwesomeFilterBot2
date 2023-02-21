@@ -43,14 +43,15 @@ start_buttons = [[
 
 
 
-
-
 async def pm_is_subscribed(bot, query):
   try:
     await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
   except UserNotParticipant:
     invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
     btn = [[InlineKeyboardButton("🤖 Join This Channel 🤖", url=invite_link.invite_link)]]
+    if query.message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        await bot.send_message(query.message.chat.id,text="**ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴏʀ ᴜ ᴄᴀɴɴᴏᴛ ᴜsᴇ ᴍᴇ**",reply_markup=InlineKeyboardMarkup(btn))
+        return False
     await bot.send_message(query.from_user.id,text="**ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴏʀ ᴜ ᴄᴀɴɴᴏᴛ ᴜsᴇ ᴍᴇ**",reply_markup=InlineKeyboardMarkup(btn))
     return False
   except Exception as e:
@@ -749,7 +750,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton('🔋 Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔋', url=f'{HOW_TO_LINK}')
+            InlineKeyboardButton('🔋 Hᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 🔋', url='{HOW_TO_LINK}')
         ]
     )
     if offset != "":
