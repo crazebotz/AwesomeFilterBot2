@@ -21,7 +21,7 @@ BATCH_FILES = {}
 
 start_buttons = [[
     InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕',
-                         url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
+                         url=f'start_buttons?startgroup=true'),
 ], [
     InlineKeyboardButton('🤖 About Me 🤖', callback_data='about'),
     InlineKeyboardButton('💥 Help ♥️', callback_data="help"),
